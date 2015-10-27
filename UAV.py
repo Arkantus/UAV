@@ -36,17 +36,17 @@ class logger:
 	def info(self,msg):
 		#for i in [self.logfile, self.loginfo]:
 		#	i.write(msg)
-		self.loginfo.write(self.logtime+" : "+msg)
-		self.logfile.write(self.logtime+" _info_ " +" : "+msg)
+		self.loginfo.write(self.logtime()+" : "+msg)
+		self.logfile.write(self.logtime()+" _info_ " +" : "+msg)
 
 	def error(self,msg):
-		self.logerror.write(self.logtime+" : "+msg)
-		self.logfile.write(self.logtime+" _error_ " +" : "+msg)
+		self.logerror.write(self.logtime()+" : "+msg)
+		self.logfile.write(self.logtime()+" _error_ " +" : "+msg)
 
 	def warning(self,msg):
-		self.logwarning.write(self.logtime+" : "+msg)
-		self.logfile.write(self.logtime+" _warning_ " +" : "+msg)
+		self.logwarning.write(self.logtime()+" : "+msg)
+		self.logfile.write(self.logtime()+" _warning_ " +" : "+msg)
 
 	def debug(self,msg):
-		self.logdebug.write(self.logtime+" : "+msg)
-		self.logfile.write(self.logtime+" _debug_ " +" : "+msg)
+		self.logdebug.write(self.logtime()+" : "+msg)
+		self.logfile.write(self.logtime()+" _debug_ " +" : "+msg)
